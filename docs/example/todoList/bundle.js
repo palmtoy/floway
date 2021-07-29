@@ -23580,20 +23580,6 @@
     rendererPackageName: 'react-dom'
   });
 
-  {
-    if (!foundDevTools && canUseDOM && window.top === window.self) {
-      // If we're in Chrome or Firefox, provide a download link if not installed.
-      if (navigator.userAgent.indexOf('Chrome') > -1 && navigator.userAgent.indexOf('Edge') === -1 || navigator.userAgent.indexOf('Firefox') > -1) {
-        var protocol = window.location.protocol;
-        // Don't warn in exotic cases like chrome-extension://.
-        if (/^(https?|file):$/.test(protocol)) {
-          console.info('%cDownload the React DevTools ' + 'for a better development experience: ' + 'https://fb.me/react-devtools' + (protocol === 'file:' ? '\nYou might need to use a local HTTP server (instead of file://): ' + 'https://fb.me/react-devtools-faq' : ''), 'font-weight:bold');
-        }
-      }
-    }
-  }
-
-
 
   var ReactDOM$2 = Object.freeze({
   	default: ReactDOM
@@ -26268,22 +26254,20 @@
 
   var todos$ = state({
     name: "todos",
-    defaultValue: [{
-      desc: "起床迎接新的一天",
-      check: true
-    }, {
-      desc: "到达公司开始新一天的工作",
-      check: true
-    }, {
-      desc: "去公司附近的学校食堂吃午饭",
-      check: false
-    }, {
-      desc: "下班骑电动车回家",
-      check: false
-    }, {
-      desc: "吃晚饭，出去吃或者自己做饭吃",
-      check: false
-    }],
+    defaultValue: [
+      {
+        desc: "起床, 迎接新的一天 :)",
+        check: false
+      },
+      {
+        desc: "到达公司, 开始新一天的工作 :)",
+        check: false
+      },
+      {
+        desc: "去公司食堂吃午饭 :)",
+        check: false
+      },
+    ],
     producer: function producer(next, value, action) {
       var n = action.index;
       var item = action.item;
@@ -26433,16 +26417,13 @@
         }, react.createElement("input", {
           className: "todolist__input",
           type: "text",
-          placeholder: "\u5B89\u6392\u65B0\u7684\u4EFB\u52A1\u5427\u2026\u2026",
+          placeholder: "添加新的任务吧 ...",
           value: this.state.newTodoContent,
           onChange: this.setNewTodoContent
         }), react.createElement("button", {
           className: "todolist__btn",
           onClick: this.addTodo
-        }, "\u6DFB\u52A0\u4EFB\u52A1")), react.createElement("a", {
-          href: "https://github.com/shayeLee/floway/tree/master/docs/example/todoList/src",
-          target: "_blank"
-        }, "\u5B8C\u6574\u6E90\u7801"));
+        }, "\u6DFB\u52A0\u4EFB\u52A1")));
       }
     }]);
 
