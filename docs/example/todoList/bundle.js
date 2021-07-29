@@ -26263,10 +26263,6 @@
         desc: "到达公司, 开始新一天的工作 :)",
         check: false
       },
-      {
-        desc: "去公司食堂吃午饭 :)",
-        check: false
-      },
     ],
     producer: function producer(next, value, action) {
       var n = action.index;
