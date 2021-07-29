@@ -26321,7 +26321,7 @@
   })(function (props) {
     return react.createElement("div", {
       className: "hints"
-    }, "\u672A\u5B8C\u6210\u4EFB\u52A1\u6570\u91CF\uFF1A", props.undoneCount);
+    }, "未完成任务数量: ", props.undoneCount);
   });
   var TodoList = (_dec = subscription({
     todos: todos$
@@ -26398,7 +26398,7 @@
           className: "todolist"
         }, react.createElement("h1", {
           className: "header"
-        }, "\u4EFB\u52A1\u5217\u8868"), react.createElement(UndoneCount, null), this.props.todos.map(function (item, n) {
+        }, "任务列表"), react.createElement(UndoneCount, null), this.props.todos.map(function (item, n) {
           return react.createElement(TodoItem, {
             item: item,
             key: item.desc,
@@ -26420,7 +26420,7 @@
         }), react.createElement("button", {
           className: "todolist__btn",
           onClick: this.addTodo
-        }, "\u6DFB\u52A0\u4EFB\u52A1")));
+        }, "添加任务")));
       }
     }]);
 
