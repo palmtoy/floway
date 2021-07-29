@@ -26383,6 +26383,7 @@
             check: false
           }
         });
+        _this.state.newTodoContent = '';
       });
 
       return _this;
